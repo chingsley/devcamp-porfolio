@@ -1,9 +1,23 @@
 <h1>Homepage</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 <!--  -->
+<div style="background-color: lightblue; margin-top: 10px;">
+<h2>My Blog Posts</h2>
 <% @posts.each do |post| %> 
-<h1><%= post.title %></h1>
+<p><%= post.title %></p>
 <p><%= post.body %></p>
 <% end %>
+</div>
+
+<div style="background-color: lightblue; margin-top: 10px;">
+<h2>Skills</h2>
+<% @skills.each do |skill| %> 
+<p>
+<span><%= skill.title %>: </span>
+<span><%= skill.percent_utilized %></span>
+</p>
+<% end %>
+</div>
+
 
 <%= @posts.inspect %>
