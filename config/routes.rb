@@ -5,7 +5,12 @@ Rails.application.routes.draw do
   get 'pages/home'
   get 'pages/about'
   get 'pages/contact'
-  resources :blogs
+
+  resources :blogs do
+    member do
+      get :toggle_status
+    end
+  end
   
   # customized routes
   get 'about-me', to: 'pages#about'    #i.e map '[host]/about' to pages controller -> about action
