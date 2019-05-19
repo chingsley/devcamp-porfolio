@@ -19,5 +19,22 @@
 <% end %>
 </div>
 
+<div style="background-color: lightblue; margin-top: 10px;">
+<h2>Portfolio items</h2>
+<% @portfolios.each do |portfolio| %> 
+<p><%= portfolio.title %>: </p>
+<p><%= portfolio.subtitle %></p>
+<p><%= portfolio.body %></p>
+<img src=<%= portfolio.thumb_image %> alt="thumb_image" />
+<% end %>
+</div>
 
+<h2>Blog posts</h2>
 <%= @posts.inspect %>
+
+<h2>Skills </h2>
+<%= @skills.inspect %>
+
+<h2>Portfolio</h2>
+<%= @posts.inspect %>
+
