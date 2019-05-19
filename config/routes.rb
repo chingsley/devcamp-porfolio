@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  #rails-generated routes
-  resources :portfolios
+  resources :portfolios, except: [:show]
+  get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show' # overrides the default route to 'show', after setting the 'except' in the line directly above
+
   get 'pages/home'
   get 'pages/about'
   get 'pages/contact'
