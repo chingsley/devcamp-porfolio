@@ -1,0 +1,15 @@
+<div style="margin: 0 10%; padding: 10px;">
+  <h1 >Portfolio Item <%= @portfolio_item.id %></h1>
+  <div style="margin-top: 70px">
+    <h2><%= @portfolio_item.title %></h2>
+    <em><%= @portfolio_item.subtitle %></em>
+    <div style="width:600px; height: 400px; margin: 4px auto;"><%= image_tag @portfolio_item.main_image unless @portfolio_item.thumb_image.nil? %></div>
+    <p><%= @portfolio_item.body %></p>
+
+    <%#= link_to "Edit", edit_portfolio_path(@portfolio_item.id) %>
+    <!-- WE CAN OMIT THE ".id" FROM THE PATH PARAMETER, AS USED IN THE NEXT LINE, AND RAILS IS SMART ENOUGH TO PICK THE ID FROM THE @portfolio_item -->
+    <%= link_to "Edit", edit_portfolio_path(@portfolio_item) %>
+    <a href="/portfolios/<%= @portfolio_item.id %>/edit">Edit</a>
+    <hr style="border: 1px solid silver" />
+  </div>
+</div>
