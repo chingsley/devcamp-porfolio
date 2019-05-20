@@ -6,4 +6,21 @@ class Portfolio < ApplicationRecord
   end
 
   scope :ruby_on_rails_portfolio_items, -> { where(subtitle: 'Ruby on Rails') }
+
+  after_initialize :set_defaults
+
+  def set_defaults
+    self.main_image ||= "https://via.placeholder.com/600x400"
+    self.thumb_image ||= "https://via.placeholder.com/350x200"
+  end
 end
+
+
+# EXPLAINING THE PIPE-EQUALS OPERATOR
+# self.main_image ||= "https://via.placeholder.com/600x400"
+# IT IS EQUIVALENT TO WRITING THE CODE BELOW
+# if self.main_image == nil
+#   self.main_image = "https://via.placeholder.com/600x400"
+# end
+
+
