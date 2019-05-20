@@ -5,6 +5,10 @@
     <em><%= @portfolio_item.subtitle %></em>
     <div style="width:600px; height: 400px; margin: 4px auto;"><%= image_tag @portfolio_item.main_image unless @portfolio_item.thumb_image.nil? %></div>
     <p><%= @portfolio_item.body %></p>
+    <h2>Technologies Used:</h2>
+    <% @portfolio_item.technologies.each do |t| %>
+      <p><%= t.name %></p>
+    <% end %>
 
     <%#= link_to "Edit", edit_portfolio_path(@portfolio_item.id) %>
     <!-- WE CAN OMIT THE ".id" FROM THE PATH PARAMETER, AS USED IN THE NEXT LINE, AND RAILS IS SMART ENOUGH TO PICK THE ID FROM THE @portfolio_item -->
