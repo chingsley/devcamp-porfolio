@@ -45,3 +45,17 @@ end
   )
 end
 puts "9 portfolio items created"
+
+# 3.times do |indx|
+#   Technology.create!(
+#     name: "Technology #{indx + 1}",
+#     portfolio_id: Portfolio.last.id
+#   )
+# end
+#----------- OR -----------------
+3.times do |indx|
+  Portfolio.last.technologies.create!(
+    name: "Technology #{indx + 1}"
+  )
+end
+puts "3 technologies created"
