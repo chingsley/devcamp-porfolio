@@ -2,18 +2,5 @@
   <h1 >Portfolio Items</h1>
   <!--<a href="portfolios/new">Create New Item</a> -->
   <%= link_to "Create New Item", new_portfolio_path %>
-  <% @portfolio_items.each do |portfolio_item| %>
-    <div style="margin-top: 70px">
-      <h2 style="pointer: cursor"><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></h2>
-      <h3><%= portfolio_item.subtitle %></h3>
-      <p><%= portfolio_item.body %></p>
-      <%#= image_tag portfolio_item.thumb_image if !portfolio_item.thumb_image.nil? %>
-      <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
-
-      <%= link_to "Edit", edit_portfolio_path(portfolio_item.id) %>
-      <a href="/portfolios/<%= portfolio_item.id %>/edit">Edit</a>
-      <p><%= link_to 'Delete Item', portfolio_path(portfolio_item.id), method: :delete, data: { confirm: 'Are you sure?' } %></p>
-      <hr style="border: 1px solid silver" />
-    </div>
-  <% end %>
+  <%= render partial: 'portfolio_item', collection: @portfolio_items %>
 </div>
