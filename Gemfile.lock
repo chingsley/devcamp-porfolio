@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/chingsley/enejakingsley_view_tool
+  revision: 1f2ed32a8a0136d9e57b10241e59af4c59781527
+  specs:
+    enejakingsley_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -206,6 +212,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   devise (~> 4.6, >= 4.6.2)
+  enejakingsley_view_tool!
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.5)
   jquery-rails

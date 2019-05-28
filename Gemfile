@@ -61,3 +61,5 @@ gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'bootstrap', '~> 4.3.1'
 
 gem 'jquery-rails'
+
+gem 'enejakingsley_view_tool', git: 'https://github.com/chingsley/enejakingsley_view_tool'
