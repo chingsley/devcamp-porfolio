@@ -2,15 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  background-color: black;
-  color: darkseagreen;
-}
+// body {
+//   background-color: black;
+//   color: darkseagreen;
+// }
 
-h1{
-  color: lightgreen;
-}
+// h1{
+//   color: lightgreen;
+// }
 
-.top a {
-  color: red;
-}
+// .top a {
+//   color: red;
+// }
+
+@import "bootstrap";
