@@ -5,10 +5,10 @@
   <%#= image_tag portfolio_item.thumb_image if !portfolio_item.thumb_image.nil? %>
   <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
 
-  <%= link_to "Edit", edit_portfolio_path(portfolio_item.id) %>
+  <%= link_to "Edit", edit_portfolio_path(portfolio_item.id) if logged_in?(:site_admin) %>
   <a href="/portfolios/<%= portfolio_item.id %>/edit">Edit</a>
   <p>
-    <%= link_to 'Delete Item', portfolio_path(portfolio_item.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Delete Item', portfolio_path(portfolio_item.id), method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %>
   </p>
   <hr style="border: 1px solid silver" />
 </div>
