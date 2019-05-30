@@ -41,7 +41,8 @@ body {
 }
 
 .cover-container {
-  max-width: 42em;
+  text-align: center;
+  max-width: 55em;
   margin: 0 auto;
   border: 1px solid white;
 }
@@ -97,7 +98,7 @@ body {
 .cover {
   padding: 0 1.5rem;
   border: 1px solid yellow;
-  text-align: center;
+  // text-align: center;
 }
 .cover .btn-lg {
   padding: .75rem 1.25rem;
