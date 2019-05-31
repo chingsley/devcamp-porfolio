@@ -113,3 +113,26 @@ body {
   color: rgba(255, 255, 255, .5);
   // border: 1px solid greenyellow;
 }
+
+
+/*
+ * My customized styles
+ */
+ .card-body {
+   color: black;
+   text-align: left;
+ }
+
+ .contact-details, 
+ .google-map {
+   border: 1px solid rgba(255, 255, 255, .3);
+ }
+
+ .google-map {
+   margin: 0;
+   padding: 0;
+ }
+
+ .auth-links a {
+   color: black;
+ }
