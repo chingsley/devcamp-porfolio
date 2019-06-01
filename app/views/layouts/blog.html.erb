@@ -65,6 +65,7 @@
   </div> <!-- end of first div of class="container" -->
 
   <main role="main" class="container">
+    <p id="notice"><%= notice %></p>
     <div class="row">
 
       <%= yield %>
@@ -103,21 +104,16 @@
           </ol>
         </div>
       </aside><!-- /.blog-sidebar -->
-
-      <footer class="blog-footer">
-        <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a
-            href="https://twitter.com/mdo">@mdo</a>.</p>
-        <p>
-          <a href="#">Back to top</a>
-        </p>
-      </footer>
-
-      <%= render "shared/nav", location: 'bottom' %>
-
-      <%= source_helper(current_user.name) %>
-
     </div> <!-- End of class="row" -->
   </main> <!-- End of main role="main" ... -->
+  <footer class="blog-footer">
+    <span><%= source_helper(current_user.name) %></span>
+    <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a
+        href="https://twitter.com/mdo">@mdo</a>.</p>
+    <p>
+      <a href="#">Back to top</a>
+    </p>
+  </footer>
 </body>
 
 </html>
