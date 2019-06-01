@@ -155,3 +155,47 @@ h1, h2, h3, h4, h5, h6 {
 .nav > .text-muted {
     color: #f8f9fa !important;
 }
+
+.container-new-blog-link {
+  background-color: #007bff;
+  width: 4rem;
+  height: 4rem;
+  line-height: 4rem;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  text-align: center;
+  border-radius: 50%;
+
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.new-blog-link {
+  color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-size: 1rem;
+  // font-weight: bold;
+  display: block;
+  width: 100%;
+  height: 100%;
+
+
+  &:hover {
+    color: #f8f9fa;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .container-new-blog-link {
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+

@@ -3,7 +3,6 @@
   <p class="blog-post-meta">Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago by <a href="#">Kingsley</a></p>
   <% if logged_in?(:site_admin) %>
     <p class="blog-post-meta">
-      <%= link_to 'New Blog', new_blog_path %> /
       <%= link_to blog.status, toggle_status_blog_path(blog) %> /
       <%= link_to 'Edit', edit_blog_path(blog) %> /
       <%= link_to 'Delete Post', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
