@@ -137,3 +137,21 @@ h1, h2, h3, h4, h5, h6 {
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
+
+.justify-content-between {
+  justify-content: center !important;
+  
+}
+
+.nav {
+  background-color: #007bff;
+}
+
+.p-2 {
+    padding: 0.5rem 1rem !important;
+    
+}
+
+.nav > .text-muted {
+    color: #f8f9fa !important;
+}
