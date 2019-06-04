@@ -11,6 +11,7 @@
 // }
 
 @import "bootstrap";
+@import "font-awesome";
 
 /* stylelint-disable selector-list-comma-newline-after */
 
@@ -144,7 +145,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav {
-  background-color: #007bff;
+  // background-color: #007bff;
+  background-color: #0056b3;
 }
 
 .p-2 {
@@ -157,7 +159,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container-new-blog-link {
-  background-color: #007bff;
+  // background-color: #007bff;
+  background-color: #0056b3;
   width: 4rem;
   height: 4rem;
   line-height: 4rem;
@@ -197,5 +200,14 @@ h1, h2, h3, h4, h5, h6 {
     height: 2.5rem;
     line-height: 2.5rem;
   }
+}
+.social-links {
+  font-size: 2.5em;
+}
+
+
+// #0056b3
+.fa {
+  color: #0056b3;
 }
 
