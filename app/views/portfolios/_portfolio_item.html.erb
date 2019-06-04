@@ -1,4 +1,25 @@
-<div style="margin-top: 70px">
+<div class="col-md-4">
+  <div class="card mb-4 shadow-sm">
+      <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
+    <div class="card-body">
+      <p class="card-text">
+        <span><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></span>
+        <%= portfolio_item.subtitle %>
+      </p>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <a class='btn btn-sm btn-outline-secondary', href="/portfolio/<%= portfolio_item.id %>">View</a>
+          <% if logged_in?(:site_admin) %>
+            <a class='btn btn-sm btn-outline-secondary', href="/portfolios/<%= portfolio_item.id %>/edit">Edit</a>
+          <% end %>
+        </div>
+        <small class="text-muted">9 mins</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div style="margin-top: 70px">
   <h2 style="pointer: cursor"><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></h2>
   <h3><%= portfolio_item.subtitle %></h3>
   <p><%= portfolio_item.body %></p>
@@ -11,4 +32,6 @@
     <%= link_to 'Delete Item', portfolio_path(portfolio_item.id), method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %>
   </p>
   <hr style="border: 1px solid silver" />
-</div>
+</div> -->
+
+<!-- {% include icons/placeholder.svg width="100%" height="225" background="#55595c" color="#eceeef" class="card-img-top" text="Thumbnail" %} -->
