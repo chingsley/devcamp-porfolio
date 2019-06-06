@@ -3,9 +3,13 @@
     <p class="float-right">
       <a href="#">Back to top</a>
     </p>
-    <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-    <p>New to Bootstrap? <a href="{{ site.url }}/">Visit the homepage</a> or read our <a
-        href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/introduction/">getting started guide</a>.
+    <p><%= @copyright %></p>
+    <p>
+      New to my Portofolio site?
+      <%= link_to "Visit the homepage", root_path %>
+      or
+      <%= link_to "Contact", contact_path %>
+      Me
     </p>
   </div>
 </footer>
