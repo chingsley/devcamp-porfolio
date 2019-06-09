@@ -8,7 +8,7 @@
 - Blog
 - Porfolio
 - Drag and drop interface
-
+- Among others
 ### code Example
 
 ``` ruby
