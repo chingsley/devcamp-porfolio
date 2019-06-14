@@ -1,20 +1,28 @@
-<div style="margin: 0 10%; padding: 10px;">
-  <h1 >Portfolio Item <%= @portfolio_item.id %></h1>
-  <div style="margin-top: 70px">
-    <h2><%= @portfolio_item.title %></h2>
-    <em><%= @portfolio_item.subtitle %></em>
-    <div style="width:600px; height: 400px; margin: 4px auto;"><%= image_tag @portfolio_item.main_image unless @portfolio_item.thumb_image.nil? %></div>
-    <p><%= @portfolio_item.body %></p>
-    <h2>Technologies Used:</h2>
-    <% @portfolio_item.technologies.each do |t| %>
-      <p><%= t.name %></p>
-    <% end %>
+<div class="container margin-top-small">
+  <div class="row">
+    <div class="col-md-7">
+      <%= image_tag @portfolio_item.main_image unless @portfolio_item.thumb_image.nil? %>
+    </div>
+    <div class="col-md-5">
+      <h1><%= @portfolio_item.title %></h1>
+      <hr>
+      <em><%= @portfolio_item.subtitle %></em>
+      <p><%= @portfolio_item.body %></p>
+      <hr>
+      <% if @portfolio_item.technologies.count > 0 %>
+        <h3>Technologies Used:</h3>
+        <% @portfolio_item.technologies.each do |t| %>
+        <p><%= t.name %></p>
+        <% end %>
+        <hr>
+      <% end %>
+    </div>
+  </div>
+</div>
 
-    <%#= link_to "Edit", edit_portfolio_path(@portfolio_item.id) if logged_in?(:site_admin) %> <!-- The # before the '=' comments out this line, so it won't be rendered-->
+   
+    <!-- The # before the '=' comments out this line, so it won't be rendered -->
+    <%#= link_to "Edit", edit_portfolio_path(@portfolio_item.id) if logged_in?(:site_admin) %>
     <!-- WE CAN OMIT THE ".id" FROM THE PATH PARAMETER, AS USED IN THE NEXT LINE, AND RAILS IS SMART ENOUGH TO PICK THE ID FROM THE @portfolio_item -->
     <%= link_to "Edit", edit_portfolio_path(@portfolio_item) if logged_in?(:site_admin) %>
     <!-- <a href="/portfolios/<%= @portfolio_item.id %>/edit">Edit</a> --> <!-- Another way to implement link-->
-    <hr style="border: 1px solid silver" />
-  </div>
-  <!-- <%= session.inspect %> -->
-</div>
