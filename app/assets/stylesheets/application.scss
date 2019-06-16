@@ -29,7 +29,6 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
   // font-size: 62.5%;
 }
 
@@ -155,4 +154,25 @@ body {
 .side-margins-small {
   margin-left: 15px;
   margin-right: 15px;
+}
+
+#background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  // background: image-url('patrick-lindenberg-191841-unsplash.jpg') no-repeat;
+  background: image-url('glenn-carstens-peters-282287-unsplash.jpg') no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.text-color-white {
+  color: white;
 }
