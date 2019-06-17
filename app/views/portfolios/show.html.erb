@@ -18,6 +18,12 @@
         <% end %>
         <hr>
       <% end %>
+      
+      <% if logged_in?(:site_admin) %>
+        <div>
+          <%= link_to "Edit Item", edit_portfolio_path(@portfolio_item), class: 'btn btn-warning' %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
@@ -26,5 +32,5 @@
     <!-- The # before the '=' comments out this line, so it won't be rendered -->
     <%#= link_to "Edit", edit_portfolio_path(@portfolio_item.id) if logged_in?(:site_admin) %>
     <!-- WE CAN OMIT THE ".id" FROM THE PATH PARAMETER, AS USED IN THE NEXT LINE, AND RAILS IS SMART ENOUGH TO PICK THE ID FROM THE @portfolio_item -->
-    <%= link_to "Edit", edit_portfolio_path(@portfolio_item) if logged_in?(:site_admin) %>
+    <%#= link_to "Edit", edit_portfolio_path(@portfolio_item) if logged_in?(:site_admin) %>
     <!-- <a href="/portfolios/<%= @portfolio_item.id %>/edit">Edit</a> --> <!-- Another way to implement link-->
