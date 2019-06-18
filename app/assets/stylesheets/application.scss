@@ -43,7 +43,7 @@ body {
 
 .cover-container {
   text-align: center;
-  max-width: 55em;
+  max-width: 65em;
   margin: 0 auto;
   // border: 1px solid white;
 }
@@ -176,4 +176,19 @@ body {
 
 .text-color-white {
   color: white;
+}
+
+.tech-news {
+  color: black;
+  margin: 20px;
+  font-weight: lighter;
+  text-shadow: none;
+}
+
+.tech-news a {
+  color: #007bff;
+}
+
+.tech-news > .card {
+  padding: 30px;
 }
