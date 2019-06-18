@@ -13,14 +13,13 @@
 
 //= require jquery
 //= require jquery_ujs
+// = require jquery3
 //= require cocoon
+//= require gritter
 //= require turbolinks
 //= require_tree .
 //= require bootstrap
 
-
-
 // = require activestorage
-// = require jquery3
 // = require popper
 // = require bootstrap-sprockets

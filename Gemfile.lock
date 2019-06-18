@@ -119,6 +119,7 @@ GEM
       activerecord (>= 4.0.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    gritter (1.2.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (1.6.0)
@@ -285,6 +286,7 @@ DEPENDENCIES
   enejakingsley_view_tool!
   font-awesome-rails (~> 4.7, >= 4.7.0.5)
   friendly_id (~> 5.1.0)
+  gritter (~> 1.2)
   jbuilder (~> 2.5)
   jquery-rails
   kaminari (~> 1.1, >= 1.1.1)
