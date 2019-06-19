@@ -8,20 +8,9 @@
     <%= @blog.body %>
   </p>
 
-  <!-- Start of comment form -->
-  <% unless current_user.is_a? GuestUser %>
-    <%= form_for @comment, url: '#' do |f| %>
-      <div class="form-group">
-        <%= f.label :content %>
-        <%= f.text_area :content, class: 'form-control' %>
-      </div>
+ <%= render 'comments/comment_form' %>
 
-      <%= f.submit 'Post Comment', class: 'btn btn-primary' %>
-    <% end %>
-  <% end %>
-  <!-- End of comment form -->
-
-  <%= render @blog.comments %>
+  <%= render @blog.comments %> <!-- By default this will go to views/comments and look for a partial named _comment.html.erb and render with that template -->
 </div>
 
 
