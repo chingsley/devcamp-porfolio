@@ -10,7 +10,9 @@
 
  <%= render 'comments/comment_form' %>
 
-  <%= render @blog.comments %> <!-- By default this will go to views/comments and look for a partial named _comment.html.erb and render with that template -->
+ <div id="comments" data-blog-id="<%= @blog.id %>">
+   <%= render @blog.comments %> <!-- By default this will go to views/comments and look for a partial named _comment.html.erb and render with that template -->
+ </div>
 </div>
 
 
