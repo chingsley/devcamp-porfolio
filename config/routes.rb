@@ -19,5 +19,8 @@ Rails.application.routes.draw do
   get 'about-me', to: 'pages#about'    #i.e map '[host]/about' to pages controller -> about action
   get 'contact', to: 'pages#contact'    #i.e map '[host]/contact' to pages controller -> contact action
   get 'tech-news', to: 'pages#tech_news'    #i.e map '[host]/contact' to pages controller -> contact action
+
+  mount ActionCable.server => '/cable'
+
   root to: 'pages#home'     # maps the homepage [host] to pages controller -> home action, and therefore to pages/home view
 end
