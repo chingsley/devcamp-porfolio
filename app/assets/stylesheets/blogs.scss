@@ -242,7 +242,16 @@ h1, h2, h3, h4, h5, h6 {
   right: 50px;
 }
 
-.h-margin-small {
-  margin-left: 5px;
-  margin-right: 5px;
+.pull-right a {
+  margin: 0 10px;
+  font-size: 1.24em;
+}
+
+.breadcrumb-blog a {
+  font-size: 1.24em;
+  margin: 0px 10px;
+}
+
+.draft i {
+  color: red !important;
 }
