@@ -1,0 +1,12 @@
+<div class="container">
+  <%= render 'shared/blog_featured_post' %>
+</div>
+<div class="col-md-8 blog-main">
+  <h1 class="pb-4 mb-4 font-italic border-bottom">
+    Topic: <%= @topic.title %>
+  </h1>
+  <%= paginate @blogs %>
+  <%= render @blogs %>
+  <%= paginate @blogs %>
+
+</div>
