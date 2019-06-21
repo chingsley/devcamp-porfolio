@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
+  before_action :set_sidebar_topics, except: [:update, :destroy, :toggle_status]
   layout "blog"  # This is the same as layout("blog"). layout is a method that takes "blog" as an argument
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]}, site_admin: :all
 
@@ -91,5 +92,9 @@ class BlogsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
       params.require(:blog).permit(:title, :body, :topic_id)
+    end
+
+    def set_sidebar_topics
+      @side_bar_topics = Topic.with_blogs
     end
 end

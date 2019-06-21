@@ -11,9 +11,15 @@
 
   <div class="form-group">
     <%= form.label :topic_id %>
+    <%
+      selected_option = ''
+      if blog.topic 
+        selected_option = blog.topic.id
+      end
+    %>
     <%= form.collection_select(:topic_id, Topic.all, :id, :title,
                               {
-                                selected: blog.topic.id,
+                                selected: selected_option,
                                 include_blank: true
                               },
                               class: 'form-control'
