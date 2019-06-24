@@ -255,3 +255,27 @@ h1, h2, h3, h4, h5, h6 {
 .draft i {
   color: red !important;
 }
+
+.navbar {
+  background-color: #0056b3;
+}
+
+.navbar-light .navbar-brand,
+.nav-link {
+    color: #f8f9fa !important;
+}
+
+.navbar-toggler {
+    background-color: #f8f9fa;
+}
+
+
+// .navbar {
+//   border: 1px solid red;
+//     position: relative;
+//     display: flex;
+//     flex-wrap: wrap;
+//     align-items: right;
+//     justify-content: space-between;
+//     padding: 0.5rem 1rem;
+// }
