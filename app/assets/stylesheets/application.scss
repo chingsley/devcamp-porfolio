@@ -230,3 +230,7 @@ body {
   margin: 5px 0 5px;
   padding: 10px 5px 10px 5px;
 }
+
+.skill:not(:first-child) {
+  margin-top: 20px;
+}

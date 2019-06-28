@@ -41,6 +41,16 @@
           >
             Education
           </button>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#skills"
+            aria-expanded="false"
+            aria-controller="skills"
+          >
+            Skills
+          </button>
         </p>
         <p>
           <div class="collapse" id="jobHistory">
@@ -59,6 +69,20 @@
             <div class="card card-block">
               CIC - WASSC
             </div>
+          </div>
+
+          <div class="skills collapse" id="skills">
+            <% @skills.each do |skill| %>
+            <div class="skill">
+              <h4><%= skill.title %></h4>
+              <div class="progres">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: <%= skill.percent_utilized %>%"
+                    aria-valuenow="<%= skill.percent_utilized %>%" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+            <% end %>
           </div>
         </p>
       </div>
