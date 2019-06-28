@@ -16,6 +16,19 @@
 
 /* stylelint-disable selector-list-comma-newline-after */
 
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+ font-family: 'Lato', sans-serif;
+}
+
 .blog-header {
   line-height: 1;
   border-bottom: 1px solid #e5e5e5;
