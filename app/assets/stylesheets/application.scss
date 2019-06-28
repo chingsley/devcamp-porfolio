@@ -197,3 +197,31 @@ body {
 .tech-news > .card {
   padding: 30px;
 }
+
+.app-card-container {
+  color: rgba(0, 0, 0, 0.9);
+  text-align: left;
+}
+
+.app-card-container > .card {
+  padding: 30px;
+  text-shadow: none;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.profile-img {
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.email-links {
+  color: #007bff;
+
+  &:hover {
+    color: blue;
+  }
+
+  &:active {
+    color: blue;
+  }
+}
