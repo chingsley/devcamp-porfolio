@@ -45,6 +45,37 @@ h6, .h6 {
  font-family: 'Lato', sans-serif;
 }
 
+.container-new-portfolio-link {
+  background-color: #0056b3;
+  width: 4rem;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  border-radius: 50%;
+
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.new-portfolio-link {
+  color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-size: 1rem;
+  // font-weight: bold;
+  display: block;
+  width: 100%;
+  height: 100%;
+
+
+  &:hover {
+    color: #f8f9fa;
+    text-decoration: none;
+  }
+}
+
 .jumbotron p:last-child {
   margin-bottom: 0;
 }
@@ -75,4 +106,13 @@ footer p {
 
 .padding-small {
   padding: 2rem;
+}
+
+
+@media (max-width: 550px) {
+  .container-new-portfolio-link {
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+  }
 }

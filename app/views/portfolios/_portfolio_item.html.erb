@@ -1,7 +1,7 @@
 <div class="col-md-4">
   <div class="card mb-4 shadow-sm">
     <% unless portfolio_item.thumb_image.nil? %>
-      <%= image_tag portfolio_item.thumb_image.url, width: '100%' %>
+      <%= image_tag portfolio_item.thumb_image, width: '100%' %>
     <% end %>
     <div class="card-body">
       <p class="card-text">
@@ -26,7 +26,6 @@
   <h3><%= portfolio_item.subtitle %></h3>
   <p><%= portfolio_item.body %></p>
   <%#= image_tag portfolio_item.thumb_image if !portfolio_item.thumb_image.nil? %>
-  <%= image_tag portfolio_item.thumb_image.url unless portfolio_item.thumb_image.nil? %>
 
   <%= link_to "Edit", edit_portfolio_path(portfolio_item.id) if logged_in?(:site_admin) %>
   <a href="/portfolios/<%= portfolio_item.id %>/edit">Edit</a>
