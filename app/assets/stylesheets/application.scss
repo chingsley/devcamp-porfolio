@@ -246,3 +246,15 @@ h6, .h6 {
 .skill:not(:first-child) {
   margin-top: 20px;
 }
+
+.margin-btm-sm {
+  margin-bottom: 2rem;
+}
+
+.collapse {
+  max-height: 20rem;
+  overflow-y: auto;
+  padding-right: 5px;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid silver;
+}
