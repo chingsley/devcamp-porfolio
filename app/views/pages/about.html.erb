@@ -1,26 +1,26 @@
 <div class="app-card-container">
   <div class="card">
-    <h1>About Me</h1>
+    <h3 class="header-about-me">About Me</h3>
     <hr>
     <div class="row">
       <div class="col-md-6">
-        <!-- <img src="https://res.cloudinary.com/dmx0a3nqi/image/upload/v1560695906/Photo_on_13-05-2019_at_12.07_PM_2.jpg" width="100%" height="100%" alt="Profile Image" /> -->
-        <%= image_tag "profile-image-2.png", width: 400, alt: "profile image", class: "profile-img" %>
+        <div class="margin-btm-sm">
+          <!-- <img src="https://res.cloudinary.com/dmx0a3nqi/image/upload/v1560695906/Photo_on_13-05-2019_at_12.07_PM_2.jpg" width="100%" height="100%" alt="Profile Image" /> -->
+          <%= image_tag "profile-image-1.jpg", width: 400, alt: "profile image", class: "profile-img" %>
+        </div>
       </div>
       <div class="col-md-6">
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati ea, numquam quo quos officia recusandae eaque
-          ipsum cumque maiores neque placeat illo suscipit voluptas iusto eum. Tempore quis dolorum magnam!
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati ea, numquam quo quos officia recusandae eaque
-          ipsum cumque maiores neque placeat illo suscipit voluptas iusto eum. Tempore quis dolorum magnam!
-        </p>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati ea, numquam quo quos officia recusandae eaque
-          ipsum cumque maiores neque placeat illo suscipit voluptas iusto eum. Tempore quis dolorum magnam!
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati ea, numquam quo quos officia recusandae eaque
-          ipsum cumque maiores neque placeat illo suscipit voluptas iusto eum. Tempore quis dolorum magnam!
-        </p>
-        <p>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#personal-statement"
+            aria-expanded="false"
+            aria-controller="personal-statement"
+          >
+            About me
+          </button>
           <button
             class="btn btn-primary"
             type="button"
@@ -74,7 +74,7 @@
           <div class="skills collapse" id="skills">
             <% @skills.each do |skill| %>
             <div class="skill">
-              <h4><%= skill.title %></h4>
+              <p><strong><%= skill.title %></strong></p>
               <div class="progres">
                 <div class="progress">
                   <div class="progress-bar bg-info" role="progressbar" style="width: <%= skill.percent_utilized %>%"
@@ -83,6 +83,22 @@
               </div>
             </div>
             <% end %>
+          </div>
+
+          <div class="personal-statement collapse" id="personal-statement">
+            <p>
+                I enjoy who I am as a programmer. Programming has helped me develop valuable personal characters.
+                It’s effect on my life transcends the professional arena. I have developed good relationships and
+                sustained them by applying, sometimes subconsciously, the same techniques I use to solve a programming
+                challenge; techniques like defining the problem and identifying the parameters at play, determining
+                concrete specific steps to solve the problem and applying those steps systematically to come up with
+                a solution. Such methods do more than produce algorithms, they also produce good personal and
+                professional relationships, resulting in a happier, more productive life. 
+            </p>
+            <p>
+              I have had bugs that took me days to solve, and I have had personal issues that took a while to resolve. Both required same technique - patience
+              and persistence. I am a programmer because I like who I am when I think like one.
+            </p>
           </div>
         </p>
       </div>
