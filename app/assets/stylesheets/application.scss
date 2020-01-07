@@ -16,9 +16,13 @@ a:hover {
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
+  // color: #333;
+  // text-shadow: none; /* Prevent inheritance from `body` */
+  // background-color: #fff;
+  // border: .05rem solid #fff;
+  color: #777;
+  text-shadow: none;
+  background-color: rgb(6, 30, 66);
   border: .05rem solid #fff;
 }
 
@@ -183,8 +187,30 @@ h6, .h6 {
   // background: image-url('patrick-lindenberg-191841-unsplash.jpg') no-repeat;
   background: image-url('glenn-carstens-peters-282287-unsplash.jpg') no-repeat;
   background-size: cover;
-  background-color: rgba(0, 0, 0, 1);
+
 }
+
+#background-testing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  // -webkit-transform: translateX(-50%) translateY(-50%);
+  // transform: translateX(-50%) translateY(-50%);
+  // background: image-url('patrick-lindenberg-191841-unsplash.jpg') no-repeat;
+  // background: image-url('franck-v-YKW0JjP7rlU-unsplash.jpg') no-repeat;
+  // background: image-url('glenn-carstens-peters-282287-unsplash.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  // background-image: linear-gradient(to bottom, rgba(11, 30, 46, 0.95), rgba(11, 30, 46, 0.9),), url('franck-v-YKW0JjP7rlU-unsplash.jpg');
+  background-image: linear-gradient(to bottom, rgba(6, 30, 62, 0.9), rgba(6, 30, 62, 0.9),), url('franck-v-YKW0JjP7rlU-unsplash.jpg');
+  // background-color: rgb(1, 1, 55);
+}
+
 
 .text-color-white {
   color: white;
@@ -257,4 +283,10 @@ h6, .h6 {
   padding-right: 5px;
   margin-bottom: 1rem;
   border-bottom: 2px solid silver;
+}
+
+
+.home-welcome,
+.home-text {
+  color: rgba(255, 255, 255, 0.8);
 }
